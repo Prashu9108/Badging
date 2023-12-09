@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badging</title>
+</head>
+<style>
+    /* CHECKBOX */
+    /* The container */
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+    }
+    
+    /* Hide checkbox */
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+    }
+    
+    /* Mouse hover*/
+    .container:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+    
+    /*  adding a blue background */
+    .container input:checked ~ .checkmark {
+      background-color: #2196F3;
+    }
+    
+    /* Create the checkmark */
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      /* display: flex; */
+    }
+    
+    
+    /* Style checkmark*/
+    .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    /* RADIO */
+
+  /* The container */
+  .container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Hide  radio button */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create  radio button */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-hover*/
+.container1:hover input ~ .checkmark1 {
+  background-color: #ccc;
+}
+
+/*  add a blue background */
+.container1 input:checked ~ .checkmark1 {
+  background-color: #2196F3;
+}
+
+/* Create the indicator */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator */
+.container1 input:checked ~ .checkmark1:after {
+  display: block;
+}
+
+/* Style the indicator  */
+.container1 .checkmark1:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+<body>
+    <center>
+        <h1>CHECKBOX</h1>
+    </center>
+    <hr> 
+    <br>
+
+    <h1>Custom Checkboxes</h1>
+
+    <label class="container">kannada
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+    </label>
+
+    <label class="container">English
+  <input type="checkbox">
+  <span class="checkmark"></span>
+    </label>
+
+    <label class="container">Hindi
+  <input type="checkbox">
+  <span class="checkmark"></span>
+    </label>
+
+    <label class="container">Malayalam
+  <input type="checkbox">
+  <span class="checkmark"></span>
+    </label>
+
+    <hr>
+
+
+    <h1>Custom Radio Buttons</h1>
+<label class="container1">One
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark1"></span>
+</label>
+<label class="container1">Two
+  <input type="radio" name="radio">
+  <span class="checkmark1"></span>
+</label>
+<label class="container1">Three
+  <input type="radio" name="radio">
+  <span class="checkmark1"></span>
+</label>
+<label class="container1">Four
+  <input type="radio" name="radio">
+  <span class="checkmark1"></span>
+</label>
+</body>
+</html>
